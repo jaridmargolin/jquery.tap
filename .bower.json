@@ -1,0 +1,14 @@
+{
+  "name": "jquery.tap",
+  "homepage": "https://github.com/aarongloege/jquery.tap",
+  "version": "1.1.4",
+  "_release": "1.1.4",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.1.4",
+    "commit": "4e4f08e4f4e7b4b17b8e8c7faac8bc8177724502"
+  },
+  "_source": "git://github.com/aarongloege/jquery.tap.git",
+  "_target": "1.1.4",
+  "_originalSource": "jquery.tap"
+}

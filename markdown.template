@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="jQuery.tap : A jQuery plugin that creates a click alternative for touch enabled browsers" />
+    <title>jQuery.tap | jQuery Plugin</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/stylesheet.css">
+    <script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" target="_blank" href="https://github.com/aarongloege/jquery.tap">View on GitHub</a>
+
+          <h1 id="project_title">jQuery.tap <span class="version"><%= version %></span></h1>
+          <h2 id="project_tagline">A jQuery plugin that creates a click alternative for touch enabled browsers</h2>
+
+            <section id="downloads">
+                <a class="zip_download_link" target="_blank" data-type="download" href="https://github.com/aarongloege/jquery.tap/archive/<%= version %>.zip">Download this project as a .zip file</a>
+                <a class="tar_download_link" target="_blank" data-type="download" href="https://github.com/aarongloege/jquery.tap/archive/<%= version %>.tar.gz">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <%= content %>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+        <footer class="inner">
+            <p class="copyright">jQuery.tap maintained by <a target="_blank" href="https://github.com/aarongloege">aarongloege</a></p>
+        </footer>
+    </div>
+    <script type="text/javascript">
+        (function(window, $) {
+            window._gaq = window._gaq || [];
+            _gaq.push(['_setAccount', 'UA-37736770-1']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
+            $(document).ready(function() {
+                $(document.body).on('click', 'a', function() {
+                    var type = $(this).data('type') || 'link';
+                    _gaq.push(['_trackEvent', type, this.href]);
+                })
+            });
+        }(window, jQuery));
+    </script>
+</body>
+</html>
